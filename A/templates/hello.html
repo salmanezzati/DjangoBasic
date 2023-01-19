@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+{# This is comment #}
+    {% if name == 'admin' %}
+        <p>Sorry...</p>
+    {% else %}
+        <h3>Hello {{ name|upper }}...</h3>
+    {% endif %}
+
+</body>
+</html>
