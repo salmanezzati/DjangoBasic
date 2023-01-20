@@ -1,9 +1,11 @@
 from django.shortcuts import render
+from .models import Todo
 #from django.http import HttpResponse
 
 
 def home(request):
-    return render(request, 'home.html')
+    all = Todo.objects.all()
+    return render(request, 'home.html', context={'todos':all})
 
 def say_hello(request):
     person = {'name':'salman'}
